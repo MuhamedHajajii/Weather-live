@@ -26,7 +26,7 @@ let thirdDayText = document.getElementById("thirdDayText");
 let countriesNameInOptions = document.getElementById("countriesNameInOptions");
 let searchInput = document.getElementById("searchInput");
 let clearInputs = document.getElementById("clearInputs");
-
+let countryFlag = document.getElementById("countryFlag");
 
 clearInputs.addEventListener("click",()=> {
   searchInput.value ="";
@@ -67,9 +67,10 @@ thirdDayText.innerHTML = res.forecast.forecastday[2].day.condition.text;
 async function contriees() {
   let data = await fetch('https://restcountries.com/v3.1/all?fields=name,flags');
   let resConetires = await data.json();
+  let flags = [];
   let final = "";
   for( let i = 0 ; i < resConetires.length ; i++){
-
+    
     final +=  `<option value="${resConetires[i].name.common}">`;
   }
   countriesNameInOptions.innerHTML = final
@@ -80,3 +81,4 @@ searchInput.addEventListener("input",()=>{
   weather(searchInput.value)
 })
 weather("Egypt")
+
