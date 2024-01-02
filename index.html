@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <!-- Start Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <!-- Start FontAwesome -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <!-- Start BootStrap  -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- Start Main Stylesheet  -->
+  <link rel="stylesheet" href="./css/mainStyle.css">
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg py-5">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="./index.html">
+        <div class="d-flex align-items-start">
+          <img class="pe-2" src="./imges/logo.png" alt="weather logo">
+          <div class="text-light text-center">
+            <h1 class="mb-1">Weather</h1>
+            <p class="headP">tagline goes here</p>
+          </div>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fa fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav list-unstyled d-flex text-center">
+          <li class="px-2 nav-item p-4 p-lg-0"><a href="#" class="text-decoration-none current">Home</a></li>
+          <li class="px-2 nav-item p-4 p-lg-0"><a href="#" class="text-decoration-none">News</a></li>
+          <li class="px-2 nav-item p-4 p-lg-0"><a href="#" class="text-decoration-none">Live cameras</a></li>
+          <li class="px-2 nav-item p-4 p-lg-0"><a href="#" class="text-decoration-none">Photos</a></li>
+          <li class="px-2 nav-item p-4 p-lg-0"><a href="./contact.html" class="text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="index">
+    <div class="container pt-1 pb-5">
+      <form class="position-relative my-5">
+        <input id="searchInput" list="countriesNameInOptions" placeholder="Find your location..." type="search">
+        <datalist id="countriesNameInOptions">
+        </datalist>
+        <input id="clearInputs" type="button" value="Clear">
+      </form>
+      <div>
+        <div class="row text-white g-0">
+          <div class="text-center text-lg-start col-md-12 col-lg-4 border-radiousTop border-radiousbottom firstSectionBottomBg">
+          <div class="border-radiousTop d-flex justify-content-between firstSectionTopBg py-2 px-2">
+            <p id="toDayIsDateName" class="m-0"></p>
+            <p id="toDayisDateNumber" class="m-0"></p>
+          </div>
+          <div class="pt-5 px-3 border-radiousbottom">
+            <p id="countryName"></p>
+            <div class="justify-content-between align-items-center">
+              <p id="currentTemp" class="temp-fs mb-0"><sup>o</sup>C</p>
+              <img id="currentTempImage" alt="cloudy">
+            </div>
+            <p id="currentTempStatus" class="text-info"></p>
+            <div class="text-secondary">
+              <img src="./imges/icon-umberella.png" alt="umberlla">
+              <p id="currentRainForcast" class="d-inline-block pe-3"><span></span></p>
+              <img src="./imges/icon-wind.png" alt="wind">
+              <p id="currentWindSpeed" class="d-inline-block pe-3"><span>km/h</span></p>
+              <img src="./imges/icon-compass.png" alt="compass">
+              <p id="currentWindCompass" class="d-inline-block pe-3"></p>
+            </div>
+          </div>
+          </div>
+          <div class="text-center col-md-12 col-lg-4 secondSectionBottomBg">
+            <p id="secondDayName" class="m-0 py-2 px-2 text-center secondSectionTopBg">Sunday</p>
+            <div class="text-center py-5 secondSectionBottomBg">
+              <div class="pt-3">
+                <img id="secondDayStatusImage" src="./imges/113.png" alt="sun">
+              </div>
+              <div id="maxForSecondDay">
+                <sup>o</sup>C
+              </div>
+              <div id="minForSecondDay"><sup>o</sup></div>
+              <p id="statusSecondDay" class="py-4 text-info"></p>
+            </div>
+          </div>
+          <div class="text-center col-md-12 col-lg-4 border-radiousbBottomright border-radiousTopright thirdSectionBottomBg">
+            <p class="m-0 border-radiousTopright py-2 px-2 text-center thirdSectionTopBg" id="thirdDayNAme"></p>
+            <div class="text-center py-5 thirdSectionBottomBg border-radiousbBottomright">
+              <div class="pt-3">
+                <img id="thirdDayImage" src="./imges/113.png" alt="sun">
+              </div>
+              <div id="ThirdDayForcatMax">
+                21.6<sup>o</sup>C
+              </div>
+              <div id="ThirdDayForcastMin">14.1<sup>o</sup></div>
+              <p id="thirdDayText" class="py-4 text-info">Sunny</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+<footer>
+  <div class="container py-5">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-12 text-center col-lg-8 ">
+        <form class="position-relative  my-5">
+          <input placeholder="Enter your email to subscribe..." type="text">
+          <input type="button" value="Subscribe">
+        </form>
+      </div>
+      <div class="col-12 col-lg-4 socialIcons">
+        <ul class="d-flex justify-content-center">
+          <li><a class="text-decoration-none" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a class="text-decoration-none" href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+          <li><a class="text-decoration-none" href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+          <li><a class="text-decoration-none" href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-light text-center pt-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+  </div>
+</footer>
+  <!-- start BootStrap js  -->
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <!-- Start Main js sheet -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

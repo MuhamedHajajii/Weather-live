@@ -1,0 +1,256 @@
+/* Fonts Google */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+/* Start Global */
+body {
+  font-family: Helvetica, 'Roboto','Open Sans', sans-serif;
+
+}
+
+:root {
+  --mainColor :#1E202B;
+  --secColor:#323544;
+}
+h1 {
+  font-size: 16px;
+}
+.headP {
+  font-size: 10px;
+}
+/* Start navbBar */
+nav {
+  background-color: var(--mainColor);
+}
+nav ul li a {
+  padding: 5px 25px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    color: white;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    font-weight: 400;
+}
+
+nav ul li a.current {
+    color: #009ad8;
+}
+@media screen and (min-width: 992px) {
+  nav ul li a.current {
+    border-color: #009ad8;
+      color: #009ad8;
+  }
+  nav ul li a:hover {
+    border-color: #009ad8;
+    color: #009ad8;
+  }
+}
+@media screen and (max-width:991px) {
+  .navbar ul {
+    background-color: var(--secColor);
+    border-radius: 30px;
+    margin-top: 15px;
+  }
+  .navbar ul li:not(:last-child) {
+    border-bottom: #828aa369 1px solid;
+  }
+}
+
+/* End navBar */
+
+/* Start Main */
+main.index {
+  background-color: var(--mainColor);
+  background-image: url("../imges/1.png");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+  input[type="search"] {
+  width: 100%;
+  padding: 20px 50px 20px 20px;
+  background: #1e202b;
+  color: white;
+  border-radius: 30px ;
+  outline: none;
+  border: none;
+}
+  input[type="text"] {
+  width: 100%;
+  padding: 20px 50px 20px 20px;
+  background: #1e202b;
+  color: white;
+  border-radius: 30px ;
+  outline: none;
+  border: none;
+}
+
+  input[type="button"] {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  padding: 0 40px;
+  border: none;
+    background: #009ad8;
+    border-radius: 30px;
+    color: white;
+}
+
+.temp-fs {
+  font-size: 90px;
+  font-weight: 700;
+  margin-right: 30px;
+}
+
+.firstSectionTopBg{
+background-color: #2D303D;
+}
+.firstSectionBottomBg{
+  background-color: #323544;
+
+}
+.secondSectionTopBg{
+  background-color:#222530 ;
+
+}
+.secondSectionBottomBg{
+  background-color: #262936;
+
+}
+.thirdSectionTopBg{
+  background-color: #2D303D;
+
+}
+.thirdSectionBottomBg{
+  background-color: #323544;
+
+}
+
+.border-radiousTop {
+  border-top-left-radius: 10px;
+}
+.border-radiousTopright {
+  border-top-right-radius: 10px;
+}
+.border-radiousbottom {
+  border-bottom-left-radius: 10px;
+}
+.border-radiousbBottomright {
+  border-bottom-right-radius: 10px;
+}
+
+footer {
+  background-color: #262936;
+
+
+}
+.socialIcons ul li {
+  display: inline-block;
+
+  margin: 0 5px;
+  cursor: pointer;
+}
+.socialIcons ul li a {
+  background: #1e202b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: #009ad8;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  font-size: 20px;
+  padding: 30px 30px;
+}
+
+.socialIcons ul li:hover a {
+  background: #009ad8;
+  color: white;
+}
+
+/* Start Contact */
+
+main.contact {
+  background-color: var(--mainColor);
+}
+
+.Breadcrumb {
+  background-color: var(--secColor);
+  font-size: 13px;
+}
+
+a.homeAnchor  {
+  color :#BFC1C8;
+  text-decoration: none;
+  padding: 0;
+}
+
+.homeAnchor:hover {
+  text-decoration: underline !important;
+}
+
+.iframeTag {
+  height: 220px;
+}
+
+.contact-form .text-area {
+  min-height: 150px;
+}
+
+::placeholder {
+  color: gray !important;
+}
+.contact-form input:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border-color: #009ad8;
+  caret-color: white;
+}
+.contact-form input:hover {
+  border-color: #009ad8;
+}
+.contact-form input {
+  border: 2px solid #393c48;
+}
+.contact-form textarea:focus {
+  background-color: transparent;
+  box-shadow: none;
+  border-color: #009ad8;
+  caret-color: white;
+}
+.contact-form textarea:hover {
+  border-color: #009ad8;
+}
+.contact-form textarea {
+  background-color: transparent;
+  border: 2px solid #393c48;
+}
+
+.secondSectionBottomBg img {
+  vertical-align: middle;
+}
+
+
+.navbar-toggler {
+  background: none;
+    border: 2px solid transparent;
+    color: white;
+    border-radius: 40px;
+    padding: 20px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    display: inline-block;
+    outline: none;
+}
+.navbar-toggler:hover {
+  border-color: #009ad8;
+  color: #009ad8;
+} 
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
